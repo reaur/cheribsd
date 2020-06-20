@@ -61,7 +61,7 @@ flag_captured(const char *message)
 	if (sysctlbyname("security.flags_captured", &fc_new, &fc_size,
 	    NULL, 0) != 0)
 		cheritest_failure_err("sysctl(security.flags_captured)");
-	if (fc_old == fc_new) {
+	if (fc_new != fc_old + 1) {
 		cheritest_failure_errx(
 		    "security.flags_captured not incremented");
 	}
