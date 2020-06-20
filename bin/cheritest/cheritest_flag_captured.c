@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2018 SRI International
+ * Copyright (c) 2020 SRI International
  * All rights reserved.
  *
  * This software was developed by SRI International and the University of
