@@ -74,7 +74,8 @@ kern_flag_captured(struct thread *td, const char * __capability message,
 		error = copyinstr(message, msg_buf, sizeof(msg_buf), NULL);
 		if (error != 0) {
 			snprintf(msg_buf, sizeof(msg_buf),
-			    "error %d copying from %p", error, message);
+			    "error %d copying from %p", error,
+			    (__cheri_fromcap const char *)message);
 		}
 	} else
 		strlcpy(msg_buf, "<null>", sizeof(msg_buf));
