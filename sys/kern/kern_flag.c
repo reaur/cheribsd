@@ -35,6 +35,7 @@
 __FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
+#include <sys/systm.h>
 #include <sys/counter.h>
 #include <sys/jail.h>
 #include <sys/kernel.h>
@@ -42,7 +43,6 @@ __FBSDID("$FreeBSD$");
 #include <sys/syscallsubr.h>
 #include <sys/syslog.h>
 #include <sys/sysproto.h>
-#include <sys/systm.h>
 
 static counter_u64_t flags_captured;
 COUNTER_U64_SYSINIT(flags_captured);
