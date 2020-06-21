@@ -44,8 +44,7 @@ __FBSDID("$FreeBSD$");
 #include <sys/syslog.h>
 #include <sys/sysproto.h>
 
-static counter_u64_t flags_captured;
-COUNTER_U64_SYSINIT(flags_captured);
+COUNTER_U64_DEFINE_EARLY(flags_captured);
 SYSCTL_COUNTER_U64(_security, OID_AUTO, flags_captured, CTLFLAG_RD,
      &flags_captured, "Calls to flag_captured(2)");
 
